@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="card-header">Search Storage</div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="search-category-select">Select Category</label>
+        <mat-select class="form-control dropdown" id="search-category-select" placeholder="Select Category"
+                    [(ngModel)]="categoryOption" (ngModelChange)="onCategoryOptionSelected($event)"
+                    [ngModelOptions]="{standalone: true}">
+          <mat-option *ngFor="let item of categoryArray" value="{{item}}">
+            {{item}}
+          </mat-option>
+        </mat-select>
+      </div>
+      <div class="form-group">
+        <label for="search-item-code-input">Item Code</label>
+        <input class="form-control" type="text" id="search-item-code-input" placeholder="Item Code" matInput
+               [formControl]="itemCodeControl" [matAutocomplete]="ItemCode">
+        <mat-autocomplete #ItemCode>
+          <mat-option *ngFor="let item of itemCodeFilter | async | slice : 0 : 10" [value]="item">
+            {{item}}
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+      <button class="btn btn-dark" mat-button (click)="onSearchButtonClicked()">Search</button>
+    </form>
+  </div>
+</div>

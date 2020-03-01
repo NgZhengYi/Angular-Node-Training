@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url('./assets/sample-wallpaper.jpg');
+  background-size: cover;
+  overflow-y: auto !important;
+  background-repeat: no-repeat;
+}
+
+/* Remove Backdrop during Selecting Sidebar Item */
+.mat-drawer-backdrop.mat-drawer-shown {
+  background: none;
+}

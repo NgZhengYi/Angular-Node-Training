@@ -1,0 +1,9 @@
+<app-header [toggleSidebar]="sidebar"></app-header>
+<mat-sidenav-container>
+  <mat-sidenav #sidebar mode="over" opened="false" fixedInViewport="true" fixedTopGap="40">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content [@onMainContentChange]="onSidebarChange ? 'open' : 'close'">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

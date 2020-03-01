@@ -1,0 +1,13 @@
+.card {
+  height: 100%;
+}
+
+.card-header {
+  background-color: black;
+  font-size: larger;
+  color: white;
+}
+
+.card-body {
+  background-color: aliceblue;
+}

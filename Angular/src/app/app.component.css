@@ -1,0 +1,11 @@
+mat-sidenav {
+  background-color: wheat !important;
+}
+
+mat-sidenav-container {
+  background-color: transparent;
+  width: 100%;
+  height: 95%;
+  overflow: hidden;
+}
+

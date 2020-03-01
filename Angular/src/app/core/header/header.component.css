@@ -1,0 +1,30 @@
+mat-toolbar {
+  position: relative;
+  z-index: 0;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row {
+  height: 5vh;
+}
+
+a {
+  color: white;
+  font-size: larger;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f44336;
+}
+
+button {
+  position: relative;
+}
+
+button:hover {
+  color: #f44336;
+}
+
+button:focus {
+  outline: none;
+}
